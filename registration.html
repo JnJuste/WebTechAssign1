@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      background: rgba(255, 255, 255, 0.7);
+      background-image: url('paysage.jpg');
+      background-size: cover;
+    }
+
+    .container {
+      padding: 40px;
+      width: 500px;
+      margin: 20px auto;
+      background: transparent;
+      background-color: rgba(241, 241, 241, 0.7);
+    }
+
+    .container h2 {
+      text-align: center;
+    }
+
+    fieldset {
+      border: 1px solid #d4d4d4;
+      padding: 20px 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .input-field {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    label {
+      margin-right: 25px;
+      margin-top: 5px;
+      width: 30%;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .icon {
+      background: #fcfcfa;
+      color: black;
+      min-width: 40px;
+      border: 2px solid #e2e2e2;
+      border-right: none;
+      text-align: center;
+      padding: 7px;
+    }
+
+    .inputs {
+      padding: 3px 10px;
+      border: 2px solid #e2e2e2;
+      width: 70%;
+    }
+
+    input [type="radio"] {
+      margin-right: 8px;
+    }
+
+    .textarea {
+      padding: 8px;
+      border: 2px solid #e2e2e2;
+    }
+
+    .textarea-icon {
+      padding-top: 14px;
+    }
+
+    .button {
+      text-align: center;
+    }
+
+    .submit {
+      color: white;
+      background: #ee9a25;
+      padding: 9px 25px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #c9c9c9;
+    }
+
+    .submit:hover {
+      background: #d1871e;
+    }
+
+    .reset {
+      color: white;
+      background: #c93232;
+      padding: 9px 25px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #c9c9c9;
+    }
+
+    .reset:hover {
+      background: #a32727;
+    }
+
+    .city {
+      margin-left: -6px;
+    }
+
+    .gender {
+      margin-left: -30px;
+    }
+
+    .courses {
+      margin-left: -26px;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .department {
+      margin-left: -26px;
+    }
+
+    .department,
+    .gender {
+      width: 30%;
+      text-align: right;
+    }
+
+    .message {
+      margin-left: -30px;
+    }
+
+    
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+    .login {
+      text-align: center;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Registration From</h2>
+    <form action="">
+      <fieldset>
+        <div class="input-field">
+          <label>Name</label>
+          <i class="fa fa-user icon"></i>
+          <input type="text" class="inputs" name="usrname">
+        </div>
+        <div class="input-field">
+          <label>Father's Name</label>
+          <i class="fa-solid fa-people-roof icon"></i>
+          <input type="text" class="inputs" name="usrname">
+        </div>
+        <div class="input-field">
+          <label>Mother's Name</label>
+          <i class="fa-solid fa-people-roof icon"></i>
+          <input type="text" class="inputs" name="usrname">
+        </div>
+        <div class="input-field">
+          <label>E-Mail</label>
+          <i class="fa fa-envelope icon"></i>
+          <input type="email" class="inputs">
+        </div>
+        <div class="input-field">
+          <label class="gender">Gender</label>
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio" name="gender" value="female"> Female
+        </div>
+        <div class="input-field">
+          <label>Password</label>
+          <i class="fa fa-eye-slash icon"></i>
+          <input type="password" class="inputs">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="input-field">
+          <label class="message">Address</label>
+          <i class="fa-solid fa-address-book icon textarea-icon"></i>
+          <textarea class="textarea"></textarea>
+        </div>
+        <div class="input-field">
+          <label class="city">City</label>
+          <i class="fa fa-list icon"></i>
+          <select name="city" id="" class="inputs">
+            <option value="0">Select City</option>
+            <option value="1">Kigali City</option>
+            <option value="2">Northen Province</option>
+            <option value="3">Southern Province</option>
+            <option value="4">Eastern Province</option>
+            <option value="5">Western Province</option>
+            <option value="6">Foreigner</option>
+          </select>
+        </div>
+        <div class="input-field">
+          <label>Zip code</label>
+          <i class="fa fa-home icon"></i>
+          <input type="number" class="inputs">
+        </div>
+        <div class="input-field">
+          <label>Phone No</label>
+          <i class="fa fa-phone icon"></i>
+          <input type="number" class="inputs">
+        </div>
+        <div class="input-field">
+          <label class="department">Department</label>
+          <i class="fa fa-list icon"></i>
+          <select name="department" id="" class="inputs">
+            <option value="0">Select Department</option>
+            <option value="1">Software Engineering</option>
+            <option value="2">Information Management</option>
+            <option value="3">Networking and Telecommunication Systems</option>
+          </select>
+        </div>
+        <div class="input-field">
+          <label>Upload High School Diploma</label>
+          <i class="fa fa-upload icon"></i>
+          <input type="file" class="inputs">
+        </div>
+      </fieldset>
+
+      <div class="button">
+        <button type="submit" class="submit">Submit</button>
+        <button type="reset" class="reset">Reset</button>
+      </div>
+      <div class="login-container">
+        <p>Already have an account? <a href="login.html" class="login">Login Here</a></p>
+       </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
